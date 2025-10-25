@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILLIBEES RESTAURANT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Playfair+Display:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000, #222);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            border-bottom: 2px solid #ff6600;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(255, 102, 0, 0.5);
+            margin: 0 auto;
+            border: 3px solid #ff6600;
+        }
+
+        .restaurant-name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff6600, #ff8c00, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 3px 3px 10px rgba(255, 102, 0, 0.3);
+            line-height: 1.1;
+            letter-spacing: 2px;
+        }
+
+        .restaurant-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffcc00;
+            font-family: 'Playfair Display', serif;
+            margin-top: -0.5rem;
+            text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: #ddd;
+            margin-top: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            background: #111;
+            margin: 2rem auto;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(255, 102, 0, 0.2);
+            border: 1px solid #333;
+        }
+
+        .social-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.3s ease;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #222;
+            width: 120px;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            background: #333;
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp { color: #25D366; }
+        .instagram { color: #E4405F; }
+        .facebook { color: #1877F2; }
+
+        .menu-section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #111;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 102, 0, 0.2);
+            border: 1px solid #333;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #ff6600;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .menu-category {
+            margin-bottom: 2rem;
+        }
+
+        .category-title {
+            color: #ff6600;
+            border-left: 4px solid #ff6600;
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #444;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .item-price {
+            color: #ff6600;
+            font-weight: bold;
+        }
+
+        .item-description {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 0.2rem;
+            width: 100%;
+        }
+
+        .pdf-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #111;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .pdf-button {
+            background: linear-gradient(45deg, #ff6600, #ff8c00);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .pdf-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        .pdf-viewer {
+            margin-top: 2rem;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #111;
+            color: #ddd;
+            margin-top: 2rem;
+            border-top: 2px solid #ff6600;
+        }
+
+        .contact-info {
+            margin: 1rem 0;
+        }
+
+        .hours {
+            margin: 1rem 0;
+            color: #ff6600;
+        }
+
+        @media (max-width: 768px) {
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .restaurant-name {
+                font-size: 2.5rem;
+            }
+            
+            .restaurant-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .menu-section {
+                padding: 1rem;
+                margin: 1rem;
+            }
+            
+            .social-btn {
+                width: 90%;
+                max-width: 250px;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .pdf-viewer iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="IMG_4672.jpeg" alt="CHILLIBEES RESTAURANT Logo" class="logo">
+        </div>
+        <div class="restaurant-name">CHILLIBEES</div>
+        <div class="restaurant-subtitle">RESTAURANT</div>
+        <div class="tagline">Authentic Flavors • Exceptional Dining Experience</div>
+    </header>
+
+    <div class="social-links">
+        <a href="https://wa.me/97455977712" class="social-btn" target="_blank">
+            <div class="social-icon whatsapp">📱</div>
+            <span>WhatsApp</span>
+            <small>+974 5597 7712</small>
+        </a>
+        
+        <a href="https://www.instagram.com/55977712/" class="social-btn" target="_blank">
+            <div class="social-icon instagram">📸</div>
+            <span>Instagram</span>
+            <small>@55977712</small>
+        </a>
+        
+        <a href="https://www.facebook.com/share/1CjUBakT7j/?mibextid=wwXIfr" class="social-btn" target="_blank">
+            <div class="social-icon facebook">👥</div>
+            <span>Facebook</span>
+            <small>Follow Us</small>
+        </a>
+    </div>
+
+    <section class="menu-section">
+        <h2 class="section-title">Our Menu</h2>
+        
+        <!-- PDF Menu Section -->
+        <div class="pdf-section">
+            <h3 style="color: #ffcc00; margin-bottom: 1rem;">Download Our Full Menu</h3>
+            <p style="margin-bottom: 1rem; color: #aaa;">Get the complete menu with all our offerings in PDF format</p>
+            <a href="menu.pdf" class="pdf-button" download>
+                📥 Download Menu PDF
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                File size: ~2MB • Updated: December 2024
+            </p>
+            
+            <!-- Optional: PDF Viewer -->
+            <!--
+            <div class="pdf-viewer">
+                <iframe src="menu.pdf" width="100%" height="500px"></iframe>
+            </div>
+            -->
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">APPETIZERS</h3>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Crispy Spring Rolls</div>
+                    <div class="item-description">Fresh vegetables wrapped in crispy pastry with sweet chili sauce</div>
+                </div>
+                <div class="item-price">25 QAR</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Garlic Butter Prawns</div>
+                    <div class="item-description">Juicy prawns sautéed in garlic butter sauce</div>
+                </div>
+                <div class="item-price">35 QAR</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Mozzarella Sticks</div>
+                    <div class="item-description">Breaded mozzarella served with marinara sauce</div>
+                </div>
+                <div class="item-price">28 QAR</div>
+            </div>
+        </div>
+
+        <!-- Other menu categories remain the same -->
+        <!-- ... rest of your menu items ... -->
+
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p><strong style="color: #ff6600;">CHILLIBEES RESTAURANT</strong></p>
+            <p>📞 +974 5597 7712</p>
+            <p class="hours">🕒 Opening Hours: 10:00 AM - 11:00 PM</p>
+        </div>
+        <p>&copy; 2024 CHILLIBEES RESTAURANT. All rights reserved.</p>
+    </footer>
+</body>
+</html>
